@@ -12,8 +12,6 @@
     --blue: hsl(212, 86%, 64%);
     --grey-500: hsl(234, 12%, 34%);
     --grey-400: hsl(212, 6%, 44%);
-    --white: hsl(0, 0%, 100%);
-    --fs: 15px;
 }
 
 section{
@@ -27,11 +25,10 @@ section{
 .header{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 50%;
     height: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -69,7 +66,7 @@ section{
     text-align: start;
     width: 80%;
 }
-.info > .title{
+.card-title{
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -102,26 +99,21 @@ section{
     font-size: 1.8rem;
     margin-bottom: .5rem;
 }
-.h .entry{
+.h.entry{
    font-weight: 600;
-   color: var(--grey-500);
-  
+   color: rgb(98, 98, 98);
 }
 .h.desc{
+    width: 80%;
     margin-top: .5rem;
     font-size: 1rem;
     text-justify: justify;
-}
-
-.title{
-    font-size: var(--fs);
 }
 .wrapper > img{
     justify-self: end;
     margin-right: 2rem;
     margin-bottom: 2rem;
 }
-
 .card1{
     grid-column: 2/3;
     grid-row: span 2;
@@ -138,14 +130,26 @@ section{
     grid-column: 4/5;
     grid-row: span 2;
 }
-
 .footer{
+    height: 1rem;
     padding-top: 2rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .header{
-        width: 60%;
+        width: 80%;
+    }
+    .h{
+        font-size: .8rem;
+    }
+    .h.heading{
+        font-size: 1.6rem;
+    }   
+    .h.entry{
+        font-size: 1.6rem;
+    }
+    .h.desc{
+        width: 100%;
     }
     .content {
         grid-template-columns: 1fr;
@@ -155,7 +159,7 @@ section{
         max-width: 450px;
     }
     .card1{
-        grid-column: 1/1;
+       grid-column: 1/1;
        grid-row: 1/2;
     }
     .card2{
@@ -167,7 +171,7 @@ section{
         grid-row: 3/4;
     }
     .card4{
-    grid-column: 1/1;
+        grid-column: 1/1;
         grid-row: 5/6;
     }
 }
